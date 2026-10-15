@@ -36,12 +36,14 @@ kairo/
 
 ### Tarefas concluídas
 T01: monorepo e tooling (package.json com workspaces apps/* e packages/*, tsconfig.base.json, .gitignore, .editorconfig, eslint.config.js, .prettierrc)
+T02: pacote shared (`@kairo/shared` com Zod)
 
 ### Rotas da API
 (nenhuma)
 
 ### Schemas e tipos
-(nenhum)
+`healthResponseSchema` / tipo `HealthResponse`
 
 ### Arquivos criados
 package.json, tsconfig.base.json, .gitignore, .editorconfig, eslint.config.js, .prettierrc
+packages/shared/package.json, packages/shared/tsconfig.json, packages/shared/src/index.ts, packages/shared/src/schemas/health.ts
