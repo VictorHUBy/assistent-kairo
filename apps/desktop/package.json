@@ -1,0 +1,21 @@
+{
+  "name": "@kairo/desktop",
+  "version": "0.1.0",
+  "private": true,
+  "main": "dist/main.js",
+  "scripts": {
+    "build": "tsup src/main.ts src/preload.ts --format cjs --out-dir dist --external electron",
+    "dev:renderer": "npm run dev -w @kairo/renderer",
+    "dev:main": "npm run build -- --watch",
+    "dev:electron": "wait-on http://127.0.0.1:5173 file:dist/main.js && electron .",
+    "dev": "concurrently -k npm:dev:renderer npm:dev:main npm:dev:electron",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.5",
+    "concurrently": "^10.0.6",
+    "electron": "^44.7.2",
+    "tsup": "^9.0.0",
+    "wait-on": "^9.5.1"
+  }
+}

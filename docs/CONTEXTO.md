@@ -106,3 +106,25 @@ Respostas de erro em JSON:
   }
 }
 ```
+
+## T04 — Renderer base (concluída)
+
+- App React em `apps/renderer` com Vite + React + TypeScript
+- Tailwind CSS **v4** via plugin `@tailwindcss/vite` (sem `tailwind.config`)
+- Tema configurado só em CSS (`src/styles/globals.css`) com variáveis OKLCH e modo escuro
+- shadcn/ui configurado à mão (sem CLI): `components.json`, `cn`, `Button` (cva + Slot)
+- Arquivos criados:
+  - `apps/renderer/package.json`
+  - `apps/renderer/tsconfig.json`
+  - `apps/renderer/vite.config.ts`
+  - `apps/renderer/index.html`
+  - `apps/renderer/components.json`
+  - `apps/renderer/src/lib/utils.ts`
+  - `apps/renderer/src/components/ui/button.tsx`
+  - `apps/renderer/src/styles/globals.css`
+  - `apps/renderer/src/main.tsx`
+  - `apps/renderer/src/App.tsx`
+
+### Observação
+
+Tailwind é v4 e configurado exclusivamente por CSS (`@import "tailwindcss"` + `@theme inline`). Não existe `tailwind.config`.
